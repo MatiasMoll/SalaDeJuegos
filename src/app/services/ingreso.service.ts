@@ -72,7 +72,8 @@ export class IngresoService {
   
   logout(){
     this.afAuth.signOut().then(()=>{
-      this.router.navigate(['home']);
+        this.isLogged = false;
+        this.router.navigate(['home']);
     });
   }
 

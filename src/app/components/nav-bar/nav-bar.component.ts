@@ -26,4 +26,8 @@ export class NavBarComponent implements OnInit {
   routeo(ruta){
     this.router.navigate(['/'+ruta]);
   }
+
+  logOut(){
+    this.ingresoService.logout();
+  }
 }
