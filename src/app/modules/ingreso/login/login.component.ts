@@ -3,6 +3,8 @@
 import { Router } from '@angular/router';
 //import * as firebase from 'firebase';
 import { Component, OnInit } from '@angular/core';
+import { IngresoService } from 'src/app/services/ingreso.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 //import { AuthService } from 'src/app/services/auth.service';
 
 
@@ -19,24 +21,24 @@ export class LoginComponent implements OnInit {
  	public usrName:string;
 	public usrPass:string;
 
-	/*constructor(
+	constructor(
 		public fireAuth:AngularFireAuth,
 		public router:Router,
-		public authService: AuthService
+		public authService: IngresoService
 	) {
-			
-	}*/
+
+	}
 
 	
 	irAlRegistro(){
-		//this.router.navigate(['/registro']);
+		this.router.navigate(['/registro']);
 	}
 	loginWithGoogle(){
-		//this.authService.GoogleAuth();
+		this.authService.GoogleAuth();
 	}
 
 	login(){
-		//this.authService.loginWithEmailAndPassword(this.usrName,this.usrPass);
+		this.authService.loginWithEmailAndPassword(this.usrName,this.usrPass);
   	}        
 	clearInputs(){
 		this.usrName = "";

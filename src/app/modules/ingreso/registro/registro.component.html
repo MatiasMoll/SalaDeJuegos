@@ -1,53 +1,76 @@
 <div class="container">
-    <form [formGroup]='formGroup' (ngSubmit)="registroWithEmailAndPassword()">
-      <div class="row">
-        <div class="col-md-12 mb-5">
-          <h2>Registro sala de juegos</h2>
-        </div>
+  <form [formGroup]="formGroup" (ngSubmit)="registroWithEmailAndPassword()">
+    <div class="row">
+      <div class="col-md-12 mb-5">
+        <h2>Registro sala de juegos</h2>
       </div>
-      <div class="row formulario">
-        <div class="col-md-6 mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" placeholder="Ingrese nombre" formControlName="nombre">
-          <small class="invalid" *ngIf="formGroup.get('nombre').errors?.required && formGroup.get('nombre').touched">El nombre es requerido</small>
-          <small class="invalid" *ngIf="formGroup.get('nombre').errors?.contieneEspacios && formGroup.get('nombre').touched">El nombre no puede tener espacios</small>
-        </div>
-        <div class="col-md-6 mb-3">
-          <label for="apellido" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="apellido" placeholder="Ingrese apellido" formControlName="apellido">
-          <small class="invalid" *ngIf="formGroup.get('apellido').errors?.required  && formGroup.get('apellido').touched">El apellido es requerido</small>
-        </div>
-        <div class="col-md-6 mb-3">
-          <label for="edad" class="form-label">Edad</label>
-          <input type="number" class="form-control" id="edad" placeholder="Ingrese edad" formControlName="edad">
-          <small class="invalid" *ngIf="formGroup.get('edad').errors?.required  && formGroup.get('edad').touched">La edad es requerida</small>
-          <small class="invalid" *ngIf="(formGroup.get('edad').errors?.min || formGroup.get('edad').errors?.max )&& formGroup.get('edad').touched">La edad debe ser mayo a 18 y menor a 99</small>
-        </div>
-        <div class="col-md-6 mb-3">
-          <label for="sexo" class="form-label">Sexo</label>
-          <select class="form-select" id="sexo" formControlName="sexo">
-            <option value="">Seleccione uno</option>
-            <option value="F">Femenino</option>
-            <option value="M">Masculino</option>
-          </select>
-          <small class="invalid" *ngIf="formGroup.get('sexo').errors?.required  && formGroup.get('sexo').touched">El sexo es requerido</small>
-        </div>
-        <div class="col-md-12 mb-5">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Ingrese email" formControlName="email">
-          <small class="invalid" *ngIf="formGroup.get('email').errors?.required && formGroup.get('email').touched ">El email es requerido</small>
-          <small class="invalid" *ngIf="formGroup.get('email').errors?.email && formGroup.get('email').touched ">El formato es invaldo</small>
-        </div>
+    </div>
+    <div class="row formulario">
+      <div class="col-md-6 mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Ingrese nombre" formControlName="nombre">
+        <small class="invalid" *ngIf="formGroup.get('nombre').errors?.required && formGroup.get('nombre').touched">El nombre es requerido</small>
+        <small class="invalid" *ngIf="formGroup.get('nombre').errors?.contieneEspacios && formGroup.get('nombre').touched">El nombre no puede tener espacios</small>
       </div>
-      <div class="row">
-        <div class="col-md-12 d-grid gap-2">
-          <button type="submit" class="btn btn-success btn-block" [disabled]="formGroup.invalid">
-            Registrarse
-          </button>
-          <button routerLink='/' type="button" class='btn btn-primary'>Volver al inicio</button>
+      <div class="col-md-6 mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="apellido" placeholder="Ingrese apellido" formControlName="apellido">
+        <small class="invalid" *ngIf="formGroup.get('apellido').errors?.required  && formGroup.get('apellido').touched">El apellido es requerido</small>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="edad" class="form-label">Edad</label>
+        <input type="number" class="form-control" id="edad" placeholder="Ingrese edad" formControlName="edad">
+        <small class="invalid" *ngIf="formGroup.get('edad').errors?.required  && formGroup.get('edad').touched">La edad es requerida</small>
+        <small class="invalid" *ngIf="(formGroup.get('edad').errors?.min || formGroup.get('edad').errors?.max )&& formGroup.get('edad').touched">La edad debe ser mayo a 18 y menor a 99</small>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="sexo" class="form-label">Sexo</label>
+        <select class="form-select" id="sexo" formControlName="sexo">
+          <option value="">Seleccione uno</option>
+          <option value="F">Femenino</option>
+          <option value="M">Masculino</option>
+        </select>
+        <small class="invalid" *ngIf="formGroup.get('sexo').errors?.required  && formGroup.get('sexo').touched">El sexo es requerido</small>
+      </div>
+      <div class="col-md-12 mb-5">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Ingrese email" formControlName="email">
+        <small class="invalid" *ngIf="formGroup.get('email').errors?.required && formGroup.get('email').touched ">El email es requerido</small>
+        <small class="invalid" *ngIf="formGroup.get('email').errors?.email && formGroup.get('email').touched ">El formato es invaldo</small>
+      </div>
+      <div class="col-md-12 mb-5">
+        <label for="email" class="form-label">Contraseña</label>
+        <input type="text" class="form-control" id="password" placeholder="Ingrese su contraseña" formControlName="password">
+        <small class="invalid" *ngIf="formGroup.get('password').errors?.required && formGroup.get('password').touched ">El password es requerido</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 d-grid gap-2">
+        <button type="submit" class="btn btn-success btn-block" [disabled]="formGroup.invalid">
+          Registrarse
+        </button>
+        <button routerLink='/' type="button" class='btn btn-primary'>Volver al inicio</button>
 
-        </div>
       </div>
-    </form>
+    </div>
+  </form>
+</div>
+
+
+<div *ngIf="this.mostrarModal; then showModal"></div>
+<ng-template #showModal class="modal fade modalFix shadow" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel">
+  <div class="modal-dialog modalFix shadow">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">{{this.modal['titulo']}}</h5>
+        <button type="button" class="btn-close" (click)='this.mostrarModal = false' aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{this.modal['cuerpo']}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="this.mostrarModal = false">Aceptar</button>
+      </div>
+    </div>
   </div>
-
+</ng-template>

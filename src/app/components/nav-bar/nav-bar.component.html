@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink=''>Sala de juegos</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" (click)="routeo('juegos/')">Juegos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" tabindex="-1" (click)="routeo('')">Listados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" tabindex="-1" (click)="routeo('quien-soy')">Quien Soy</a>
+          </li>
+        </ul>
+        
+        <form class="d-flex">
+          <div *ngIf="this.ingresoService.isLogged; then blockLogOut  else blockIngreso"></div>
+          <ng-template #blockIngreso>
+            <button class="btn btn-outline-primary" (click)="routeo('ingreso/registro')">Registrar</button>
+            <button class="btn btn-outline-success" (click)="routeo('ingreso/login')">Iniciar Sesion</button>
+          </ng-template>
+          <ng-template #blockLogOut>
+            <div class="m-3">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">{{nombreUsuario}}</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline-danger" >Log Out</button>
+          </ng-template>
+        </form>
+      </div>
+    </div>
+  </nav>
