@@ -71,6 +71,7 @@ export class IngresoService {
   }
   
   logout(){
+    console.log('actualizate');
     this.afAuth.signOut().then(()=>{
         this.isLogged = false;
         this.router.navigate(['home']);
