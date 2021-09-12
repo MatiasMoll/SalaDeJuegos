@@ -9,20 +9,29 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { QuienSoyComponent } from './pages/quien-soy/quien-soy.component';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JuegosModule } from './modules/juegos/juegos.module';
+import { ChatComponent } from './pages/chat/chat.component';
+import { ListadoMensajesComponent } from './components/listado-mensajes/listado-mensajes.component';
+import { EnvioMensajesComponent } from './components/envio-mensajes/envio-mensajes.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavBarComponent,
-    QuienSoyComponent
+    QuienSoyComponent,
+    ChatComponent,
+    ListadoMensajesComponent,
+    EnvioMensajesComponent
   ],
   imports: [ 
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
+    JuegosModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   exports: [

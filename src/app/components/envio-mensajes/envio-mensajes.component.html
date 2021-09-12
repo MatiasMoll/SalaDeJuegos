@@ -1,0 +1,9 @@
+
+
+<div class="input-group input-group-sm mb-3 centrado">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-sm">Mensaje</span>
+    </div>
+    <input type="text"  [(ngModel)]="nuevoMensaje.textoCuerpo" (keypress)="EnviarMensajePorEnter($event)" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+    <button type="button" class="btn btn-success" (click)="EnviarMensaje()">Enviar</button>
+</div>

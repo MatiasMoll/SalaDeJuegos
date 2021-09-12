@@ -1,0 +1,21 @@
+<div class="container" >
+  <h1 style="text-align: center">Sala de Chat</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"><strong>EMISOR</strong></th>
+        <th scope="col"><strong>MENSAJE</strong></th>
+        <th scope="col"><strong>FECHA ENVIADO</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let line of listadoMensajesMostrar; let i = index" [ngClass]="line.emisorUid == this.uidUsuario ? 'tuMensaje' : null " >
+          <th scope="row">{{i}}</th>
+          <th scope="row">{{line.emisor}}</th>
+          <th scope="row">{{line.textoCuerpo}}</th>
+          <th scope="row">{{line.enviadoFecha}}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>

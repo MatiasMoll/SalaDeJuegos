@@ -1,0 +1,13 @@
+.inicio{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.grey{
+    background-color: #BFE0DC;
+}
+.lightblue{
+    background-color: lightblue;
+}
+.tuMensaje{
+    background-color: #42F704;
+}
