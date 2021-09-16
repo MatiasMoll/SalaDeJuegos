@@ -55,7 +55,7 @@ export class AhorcadoComponent implements OnInit {
           console.log('else esle ' + this.palabraElegida.toLowerCase().indexOf(letra.toLowerCase()));
           indice = this.palabraElegida.toLowerCase().indexOf(letra.toLowerCase());
           console.log('else ' + indice);
-          espacioPal[indice] = letra.toLowerCase();
+          espacioPal[indice] = letra.toLowerCase();                     
         }
       }
       this.espaciosPalabra = espacioPal;
