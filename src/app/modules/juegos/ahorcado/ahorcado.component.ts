@@ -86,6 +86,7 @@ export class AhorcadoComponent implements OnInit {
     this.vidas = 5;
     this.puntaje = 0;
     this.espaciosPalabra = new Array<any>();
+    this.activarTodasLasLetras();
     this.palabraElegida = this.palabras[Math.floor(Math.random() * 10)];
     for(let i = 0 ; i<this.palabraElegida.length;i++){
       this.espaciosPalabra[i] = '_';
