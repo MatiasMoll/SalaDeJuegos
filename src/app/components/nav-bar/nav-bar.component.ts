@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { IngresoService } from 'src/app/services/ingreso.service';
 
@@ -9,18 +9,22 @@ import { IngresoService } from 'src/app/services/ingreso.service';
 })
 export class NavBarComponent implements OnInit {
 
-  public nombreUsuario:string;
+ 
+  @Input() nombreUsuario:string;
   constructor(
     public ingresoService : IngresoService,
     private router: Router
   ) { 
+
     console.log('El usuario esta logeado constructor' + this.ingresoService.isLogged);
+    this.nombreUsuario = IngresoService.userNameLogged;
   }
 
   ngOnInit(): void {  
     if(this.ingresoService.isLogged){
       this.nombreUsuario = IngresoService.userNameLogged;
     }
+
   }
 
   routeo(ruta){

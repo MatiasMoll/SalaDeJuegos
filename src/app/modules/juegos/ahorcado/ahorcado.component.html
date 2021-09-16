@@ -1,60 +1,64 @@
 
-<div class="container">
-    <h1>{{this.espaciosPalabra}}</h1>
-    
-</div>
+    <div [ngClass]="endGame ? 'disabledbutton' : 'centrado' " id="juegoAhorcado">
+        <h1 class="centrado">¡El juego del Ahorcado!</h1>
+        <div class="container centrado">
+            <h1>{{this.espaciosPalabra}}</h1>
+        </div>
+        <table id="tabla">
+            <tr>
+                <td><button class="btn btn-primary" id="A" (click)="revisarLetra('A')"> A </button></td>
+                <td><button class="btn btn-primary" id="B" (click)="revisarLetra('B')"> B </button></td>
+                <td><button class="btn btn-primary" id="C" (click)="revisarLetra('C')"> C </button></td>
+                <td><button class="btn btn-primary" id="D" (click)="revisarLetra('D')"> D </button></td>
+                <td><button class="btn btn-primary" id="E" (click)="revisarLetra('E')"> E </button></td>
+                <TD><button class="btn btn-primary" id="F" (click)="revisarLetra('F')"> F </button></TD>
+                <td><button class="btn btn-primary" id="G" (click)="revisarLetra('G')"> G </button></td>
+                <td><button class="btn btn-primary" id="H" (click)="revisarLetra('H')"> H </button></td>
+                <td><button class="btn btn-primary" id="I" (click)="revisarLetra('I')"> I </button></td>
+            </tr>
+            <tr>
+                <td><button class="btn btn-primary" id="J" (click)="revisarLetra('J')"> J </button></td>
+                <td><button class="btn btn-primary" id="K" (click)="revisarLetra('K')"> K </button></td>
+                <td><button class="btn btn-primary" id="L" (click)="revisarLetra('L')"> L </button></td>
+                <td><button class="btn btn-primary" id="M" (click)="revisarLetra('M')"> M </button></td>
+                <td><button class="btn btn-primary" id="N" (click)="revisarLetra('N')"> N </button></td>
+                <td><button class="btn btn-primary" id="Ñ" (click)="revisarLetra('Ñ')"> Ñ </button></td>
+                <td><button class="btn btn-primary" id="O" (click)="revisarLetra('O')"> O </button></td>
+                <td><button class="btn btn-primary" id="P" (click)="revisarLetra('P')"> P </button></td>
+                <td><button class="btn btn-primary" id="Q" (click)="revisarLetra('Q')"> Q </button></td>
+            </tr>
+            <tr>
+                <td><button class="btn btn-primary" id="R" (click)="revisarLetra('R')"> R </button></td>
+                <td><button class="btn btn-primary" id="S" (click)="revisarLetra('S')"> S </button></td>
+                <td><button class="btn btn-primary" id="T" (click)="revisarLetra('T')"> T </button></td>
+                <td><button class="btn btn-primary" id="U" (click)="revisarLetra('U')"> U </button></td>
+                <td><button class="btn btn-primary" id="V" (click)="revisarLetra('V')"> V </button></td>
+                <td><button class="btn btn-primary" id="W" (click)="revisarLetra('W')"> W </button></td>
+                <td><button class="btn btn-primary" id="X" (click)="revisarLetra('X')"> X </button></td>
+                <td><button class="btn btn-primary" id="Y" (click)="revisarLetra('Y')"> Y </button></td>
+                <td><button class="btn btn-primary" id="Z" (click)="revisarLetra('Z')"> Z </button></td>
+            </tr>
 
-<div class="container">
-    <div class="row  btn-group" role="group" aria-label="Basic example">
-        <div class="col">
-            <button class="btn btn-primary" (click)="revisarLetra('A')"> A </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-primary" (click)="revisarLetra('B')"> B </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-primary" (click)="revisarLetra('C')"> C </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-primary" (click)="revisarLetra('D')"> D </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-primary" (click)="revisarLetra('E')"> E </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-primary" (click)="revisarLetra('F')"> F </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-primary" (click)="revisarLetra('G')"> G </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-primary" (click)="revisarLetra('H')"> H </button>
-        </div>
-        <div class="col">
-            <button class="btn btn-primary" (click)="revisarLetra('I')"> I </button>
+        </table>
+        <div class="centrado">
+            <h3>Vidas Restantes:</h3>
+            <h4>{{vidas}}</h4>
+        
         </div>
     </div>
-    <div class="row  btn-group" role="group" aria-label="Basic example">
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('J')"> J </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('K')"> K </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('L')"> L </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('M')"> M </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('N')"> N </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('Ñ')"> Ñ </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('O')"> O </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('P')"> P </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('Q')"> Q </button></div>
+
+    <div *ngIf="this.endGame"[ngClass]="win ? 'centrado success' : 'centrado error' ">
+
+        <app-toast-custom
+            [titulo]="this.titulo"
+            [mensaje]="this.message"
+            [gano]="this.win"
+            (eventNewGame)="this.iniciarJuego()"
+            (eventBackHome)="this.volverAlHome()"
+        >
+    
+        </app-toast-custom>
+    
     </div>
-    <div class="row  btn-group" role="group" aria-label="Basic example">
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('R')"> R </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('S')"> S </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('T')"> T </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('U')"> U </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('V')"> V </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('W')"> W </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('X')"> X </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('Y')"> Y </button></div>
-        <div class="col"><button class="btn btn-primary" (click)="revisarLetra('Z')"> Z </button></div>
-    </div>
-</div>
+ 
 

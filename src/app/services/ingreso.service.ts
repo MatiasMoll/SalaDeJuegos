@@ -53,6 +53,8 @@ export class IngresoService {
       this.afAuth.signInWithEmailAndPassword(name,pass)
           .then((result)=>{
               IngresoService.iudUserLogged = result.user.uid;
+              console.log(result.user);
+              console.log(name);
               IngresoService.userNameLogged = name;
               this.isLogged = true;
               console.log(this.isLogged);

@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let line of listadoMensajesMostrar; let i = index" [ngClass]="line.emisorUid == this.uidUsuario ? 'tuMensaje' : null " >
+      <tr *ngFor="let line of listadoMensajesMostrar; let i = index" [ngClass]="line.emisorUid == this.uidUsuario ? 'alert-dark' : null " >
           <th scope="row">{{i}}</th>
           <th scope="row">{{line.emisor}}</th>
           <th scope="row">{{line.textoCuerpo}}</th>

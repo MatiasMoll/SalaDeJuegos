@@ -1,0 +1,28 @@
+.centrado{
+    align-items: center!important;
+    text-align: center!important;
+    margin-right:auto;
+    
+}
+
+.disabledbutton {
+    align-items: center!important;
+    text-align: center!important;
+    margin: auto!important;
+    margin-right:auto!important;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+
+#tabla{
+    margin: auto;
+}
+
+.success{
+    background-color: green;
+}
+
+.error{
+    background-color: red;
+}

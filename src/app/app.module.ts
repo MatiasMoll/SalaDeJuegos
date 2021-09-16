@@ -14,6 +14,7 @@ import { JuegosModule } from './modules/juegos/juegos.module';
 import { ChatComponent } from './pages/chat/chat.component';
 import { ListadoMensajesComponent } from './components/listado-mensajes/listado-mensajes.component';
 import { EnvioMensajesComponent } from './components/envio-mensajes/envio-mensajes.component';
+import { ToastrService } from 'ngx-toastr';
 
 
 @NgModule({

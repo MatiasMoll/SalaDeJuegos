@@ -1,1 +1,15 @@
-<p>mayor-menor works!</p>
+
+<div class="container centrado">
+
+    <div>
+        <img [src]="this.cartaSeleccionada.url" height="30%"/>
+    </div>
+    <div>
+        <button type="button" class="btn btn-success" (click)="checkJugada(true)">Mayor</button>
+        <button type="button" class="btn btn-danger" (click)="checkJugada(false)">Menor</button>
+    </div>
+    <div class="centrado">
+        <h3>Puntaje:</h3>
+        <h4>{{puntuacion}}</h4>
+    </div>
+</div>

@@ -5,8 +5,8 @@ import { JuegosRoutingModule } from './juegos-routing.module';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { AhorcadoComponent } from './ahorcado/ahorcado.component';
 import { MayorMenorComponent } from './mayor-menor/mayor-menor.component';
-import { NavBarComponent } from 'src/app/components/nav-bar/nav-bar.component';
-import { AppModule } from 'src/app/app.module';
+import { ToastCustomComponent } from './toast-custom/toast-custom.component';
+
 
 
 
@@ -16,12 +16,11 @@ import { AppModule } from 'src/app/app.module';
     MenuPrincipalComponent,
     AhorcadoComponent,
     MayorMenorComponent,
-    
+    ToastCustomComponent
   ],
   imports: [
     CommonModule,
-    JuegosRoutingModule
-    
+    JuegosRoutingModule    
   ]
 })
 export class JuegosModule { }
