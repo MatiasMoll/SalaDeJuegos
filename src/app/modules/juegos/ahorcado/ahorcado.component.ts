@@ -50,7 +50,7 @@ export class AhorcadoComponent implements OnInit {
       for(let i  = 0 ; i < this.palabraElegida.length ; i++){
         if(indice != -10){
           console.log('entra ' + indice);
-          espacioPal[this.palabraElegida.toLowerCase().indexOf(letra.toLowerCase(),indice)] = letra.toLowerCase();
+          espacioPal[this.palabraElegida.toLowerCase().indexOf(letra.toLowerCase(),indice+1)] = letra.toLowerCase();
         }else{
           console.log('else esle ' + this.palabraElegida.toLowerCase().indexOf(letra.toLowerCase()));
           indice = this.palabraElegida.toLowerCase().indexOf(letra.toLowerCase());
@@ -64,13 +64,13 @@ export class AhorcadoComponent implements OnInit {
     }
 
     console.log('son iguales ' + this.espaciosPalabra.slice() == this.palabraElegida.slice());
-    console.log('palbra elegida ' + this.palabraElegida);
-    console.log('palabra espacio ' + (this.espaciosPalabra.slice(0,this.espaciosPalabra.length)).toString());
+    console.log('palbra elegida ' + this.palabraElegida.slice());
+    console.log('palabra espacio ' + this.espaciosPalabra.slice(0,this.espaciosPalabra.length));
  
     if(this.vidas == 0){
       console.log(this.vidas);
       this.finPartida();
-    }else if(this.espaciosPalabra.slice(0,this.espaciosPalabra.length).toString() == this.palabraElegida){
+    }else if(!this.espaciosPalabra.includes('_')){
       this.finPartida();
     }
 

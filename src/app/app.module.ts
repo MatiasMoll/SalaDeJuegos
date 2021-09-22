@@ -15,7 +15,7 @@ import { ChatComponent } from './pages/chat/chat.component';
 import { ListadoMensajesComponent } from './components/listado-mensajes/listado-mensajes.component';
 import { EnvioMensajesComponent } from './components/envio-mensajes/envio-mensajes.component';
 import { ToastrService } from 'ngx-toastr';
-
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +33,7 @@ import { ToastrService } from 'ngx-toastr';
     ReactiveFormsModule,
     FormsModule,
     JuegosModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   exports: [
