@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { FormBuilder } from '@angular/forms';
 import { Juego } from '../../modelos/juego';
 
 @Injectable({
@@ -22,4 +23,8 @@ export class JuegoService {
     return this.juegosRef.add({...juego});
   }
 
-}
+  traerPartidas(nombreJuego:string): AngularFirestoreCollection<Juego>{
+    console.log(nombreJuego);
+    return this.db.collection(this.dbPath,ref => ref.where('nombreJuego','==',nombreJuego).orderBy('puntaje','desc'));
+  }
+} 

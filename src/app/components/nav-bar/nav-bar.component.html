@@ -3,17 +3,20 @@
       <a class="navbar-brand" routerLink=''>Sala de juegos</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+          <li class="nav-item" *ngIf = "this.ingresoService.isLogged">
             <a class="nav-link active" aria-current="page" (click)="routeo('juegos/')">Juegos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" tabindex="-1" (click)="routeo('')">Listados</a>
+          <li class="nav-item" *ngIf = "this.ingresoService.isLogged">
+            <a class="nav-link active" tabindex="-1" (click)="routeo('juegos/listado')">Listados</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf = "this.ingresoService.isLogged">
             <a class="nav-link active" tabindex="-1" (click)="routeo('quien-soy')">Quien Soy</a>
           </li>
           <li class="nav-item" *ngIf = "this.ingresoService.isLogged">
             <a class="nav-link active" tabindex="-1" (click)="routeo('chat')">Chat</a>
+          </li>
+          <li class="nav-item" *ngIf = "this.ingresoService.isLogged">
+            <a class="nav-link active" tabindex="-1" (click)="routeo('encuesta')">Encuesta</a>
           </li>
         </ul>
         

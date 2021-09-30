@@ -6,21 +6,20 @@ import { MenuPrincipalComponent } from './menu-principal/menu-principal.componen
 import { AhorcadoComponent } from './ahorcado/ahorcado.component';
 import { MayorMenorComponent } from './mayor-menor/mayor-menor.component';
 import { ToastCustomComponent } from './toast-custom/toast-custom.component';
-
-
-
-
+import { AciertaNombreComponent } from './acierta-nombre/acierta-nombre.component';
+import { TablaPuntosComponent } from 'src/app/components/tabla-puntos/tabla-puntos.component';
 
 @NgModule({
   declarations: [
     MenuPrincipalComponent,
     AhorcadoComponent,
     MayorMenorComponent,
-    ToastCustomComponent
+    ToastCustomComponent,
+    AciertaNombreComponent
   ],
   imports: [
     CommonModule,
-    JuegosRoutingModule    
+    JuegosRoutingModule 
   ]
 })
 export class JuegosModule { }

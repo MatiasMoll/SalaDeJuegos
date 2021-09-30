@@ -11,7 +11,7 @@ import * as firebase from 'firebase';
 export class IngresoService {
 
   private usersLogged:string = '/userLogged';
-  public isLogged:Boolean = false;
+  public isLogged:boolean = false;
   public static userNameLogged:string;
   public static iudUserLogged:string;
 

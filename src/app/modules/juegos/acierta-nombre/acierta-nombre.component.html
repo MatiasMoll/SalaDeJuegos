@@ -1,0 +1,23 @@
+
+    <div class="card centrado" *ngIf="this.personajeElegido" style="width: 40% !important;" >
+        <img [src]="this.personajeElegido.foto" class="card-img-top" style="width: 100% !important; height:25% !important;">
+        <div class="row">
+            <div class="card-body" *ngFor="let name of nombresSecundariosAux; let i = index" style="width: 33%;float:left;">
+                <div class="col-4 mt-5 centrado" >
+                    <button class="btn btn-success " type="button" (click)="checkJugada(name)">{{name}}</button>  
+                </div>  
+            </div>
+        </div>
+        <div class="row">
+            <div class="card-body" *ngFor="let name of nombresSecundarios; let i = index" style="width: 33%;float:left;">
+                <div class="col-4 mt-5 centrado" >
+                    <button class="btn btn-success" type="button" (click)="checkJugada(name)">{{name}}</button>  
+                </div>  
+            </div>
+        </div>
+     
+    </div>
+    <div class="centrado">
+        <h3>Puntaje:</h3>
+        <h4>{{puntaje}}</h4>
+    </div>

@@ -1,0 +1,13 @@
+.centrado{
+    align-items: center!important;
+    text-align: center!important;
+    margin:auto !important;
+    
+}
+
+
+
+
+.test{
+    float: left;
+}

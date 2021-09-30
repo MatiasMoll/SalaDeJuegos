@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { JuegoLoL } from 'src/app/services/juegoLol/juegoLol.service';
+
 
 @Component({
   selector: 'app-menu-principal',
@@ -10,10 +10,9 @@ import { JuegoLoL } from 'src/app/services/juegoLol/juegoLol.service';
 export class MenuPrincipalComponent implements OnInit {
 
   constructor(
-    private router:Router,
-    private servicio:JuegoLoL
+    private router:Router
   ) { 
-    this.servicio.getChampion('asd');
+    
   }
 
   ngOnInit(): void {

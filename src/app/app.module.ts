@@ -16,6 +16,11 @@ import { ListadoMensajesComponent } from './components/listado-mensajes/listado-
 import { EnvioMensajesComponent } from './components/envio-mensajes/envio-mensajes.component';
 import { ToastrService } from 'ngx-toastr';
 import { HttpClientModule} from '@angular/common/http';
+import { AciertaNombreComponent } from './modules/juegos/acierta-nombre/acierta-nombre.component';
+import { ListadoJuegosComponent } from './modules/juegos/listado-juegos/listado-juegos.component';
+import { TablaPuntosComponent } from './components/tabla-puntos/tabla-puntos.component';
+import { EncuestaComponent } from './pages/encuesta/encuesta.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +30,10 @@ import { HttpClientModule} from '@angular/common/http';
     QuienSoyComponent,
     ChatComponent,
     ListadoMensajesComponent,
-    EnvioMensajesComponent
+    EnvioMensajesComponent,
+    ListadoJuegosComponent,
+    TablaPuntosComponent,
+    EncuestaComponent
   ],
   imports: [ 
     BrowserModule,
@@ -37,7 +45,8 @@ import { HttpClientModule} from '@angular/common/http';
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   exports: [
-    NavBarComponent
+    NavBarComponent,
+    TablaPuntosComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

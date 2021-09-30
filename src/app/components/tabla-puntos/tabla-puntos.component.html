@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+        <tr class="table-dark" style="width: 100%;">
+            <th>{{nombreJuego}}</th>
+        </tr>
+        <tr class="table-dark">
+            <th>Usuario</th>
+            <th>Puntaje</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let juego of juegos">
+            <th scope="row">{{juego.usuario}}</th>
+            <td>{{juego.puntaje}}</td>
+        </tr>
+    </tbody>
+</table>
