@@ -37,7 +37,7 @@ export class EncuestaComponent implements OnInit {
   private spaceValidator(control: AbstractControl): null | object {
     const nombre = <string> control.value;
     const espacios = nombre.includes(' ');
-
+    console.log('test');
     if(espacios){
       return {
         contieneEspacios:true
