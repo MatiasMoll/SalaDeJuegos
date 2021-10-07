@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch:'full'},
   { path: 'home',component:HomeComponent,canActivate:[UserLoggedGuard]},
   { path: 'ingreso',loadChildren: () => import('./modules/ingreso/ingreso.module').then(m => IngresoModule) },
-  { path: 'juegos',loadChildren: () => import('./modules/juegos/juegos.module').then(m => JuegosModule),canActivate:[UserLoggedGuard]},
+  { path: 'juegos',loadChildren: () => import('./modules/juegos/juegos.module').then(m => JuegosModule),/*canActivate:[UserLoggedGuard]*/},
   { path: 'chat',component:ChatComponent,canActivate:[UserLoggedGuard]},
   { path: 'quien-soy',component:QuienSoyComponent,canActivate:[UserLoggedGuard]},
   { path: 'encuesta',component:EncuestaComponent,canActivate:[UserLoggedGuard]}

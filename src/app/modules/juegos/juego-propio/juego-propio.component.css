@@ -1,0 +1,25 @@
+.centrado{
+    text-align: center!important;
+    margin-right:auto;
+    position:relative;
+}
+.disabledbutton {
+    text-align: center!important;
+    margin: auto!important;
+    margin-right:auto!important;
+    pointer-events: none;
+    opacity: 0.4;
+}
+.success{
+    background-color: green;
+}
+
+.mitadPantalla{
+    vertical-align: middle;
+    position:absolute;
+    top:50%;
+    width: 100%;
+}
+.error{
+    background-color: red;
+}

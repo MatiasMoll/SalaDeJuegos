@@ -1,0 +1,46 @@
+
+<div class="container centrado" *ngIf="this.empezoJuego;else noEmpezoJuego" >
+    <div [ngClass]="endGame ? 'disabledbutton' : 'centrado' " id="juegoAhorcado">
+        <div >
+            <img [src]="this.cartaSeleccionada.url" height="25%"/>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col centrado">
+                    <h3> Usted: {{puntuacion}}</h3>
+                </div> 
+                <div class="col centrado">
+                    <h3> La casa: {{puntuacionCasa}}</h3>
+                </div>
+            </div>      
+    
+        </div>
+        <div>
+            <button type="button" class="btn btn-success" (click)="checkJugada()">Pedir Otra</button>
+            <button type="button" class="btn btn-danger" (click)="noSeguirPidiendo()">No seguir pidiendo</button>
+        </div>
+    </div>
+    <div *ngIf="this.endGame"[ngClass]="isWin ? 'centrado success mitadPantalla' : 'centrado error mitadPantalla' ">
+        <app-toast-custom
+            [titulo]="this.titulo"
+            [mensaje]="this.message"
+            [gano]="this.isWin"
+            (eventNewGame)="this.iniciarJuego()"
+            (eventBackHome)="this.volverAlHome()"
+        >
+    
+        </app-toast-custom>
+    
+    </div>
+</div>
+
+<ng-template #noEmpezoJuego class="container centrado">
+    <div >
+        <button type="button" class="btn btn-primary" (click)="empezarJuego()">Empezar juego</button>
+    </div>
+</ng-template>
+
+
+
+
+

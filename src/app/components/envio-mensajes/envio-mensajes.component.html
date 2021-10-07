@@ -4,6 +4,6 @@
     <div class="input-group-prepend">
       <span class="input-group-text" id="inputGroup-sizing-sm">Mensaje</span>
     </div>
-    <input type="text"  [(ngModel)]="nuevoMensaje.textoCuerpo" (keypress)="EnviarMensajePorEnter($event)" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-    <button type="button" class="btn btn-success" (click)="EnviarMensaje()">Enviar</button>
+    <input type="text"  [(ngModel)]="nuevoMensaje.textoCuerpo" (keypress)="EnviarMensajePorEnter($event)" aria-label="Small" width="75%" aria-describedby="inputGroup-sizing-sm">
+    <button type="button" class="btn btn-success" width="20%" (click)="EnviarMensaje()">Enviar</button>
 </div>

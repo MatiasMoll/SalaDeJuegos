@@ -4,6 +4,7 @@ import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
+import { NavBarComponent } from '../components/nav-bar/nav-bar.component';
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +38,7 @@ export class IngresoService {
           console.log('You have been successfully logged in!');
           console.log(provider);
           console.log(result.additionalUserInfo.profile);
+          NavBarComponent.nombreUsuario = result.additionalUserInfo.profile['name'];
           IngresoService.userNameLogged = result.additionalUserInfo.profile['name'];
           IngresoService.iudUserLogged = result.additionalUserInfo.profile['id'];
           this.isLogged = true;
@@ -55,6 +57,7 @@ export class IngresoService {
               IngresoService.iudUserLogged = result.user.uid;
               console.log(result.user);
               console.log(name);
+              NavBarComponent.nombreUsuario = name;
               IngresoService.userNameLogged = name;
               this.isLogged = true;
               console.log(this.isLogged);

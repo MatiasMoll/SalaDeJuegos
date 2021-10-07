@@ -8,6 +8,7 @@ import { MayorMenorComponent } from './mayor-menor/mayor-menor.component';
 import { ToastCustomComponent } from './toast-custom/toast-custom.component';
 import { AciertaNombreComponent } from './acierta-nombre/acierta-nombre.component';
 import { TablaPuntosComponent } from 'src/app/components/tabla-puntos/tabla-puntos.component';
+import { JuegoPropioComponent } from './juego-propio/juego-propio.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TablaPuntosComponent } from 'src/app/components/tabla-puntos/tabla-punt
     AhorcadoComponent,
     MayorMenorComponent,
     ToastCustomComponent,
-    AciertaNombreComponent
+    AciertaNombreComponent,
+    JuegoPropioComponent
   ],
   imports: [
     CommonModule,

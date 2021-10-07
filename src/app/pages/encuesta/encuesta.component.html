@@ -36,7 +36,7 @@
           <label for="gustoJuego" class="form-label">Numero de telefono</label>
           <input type="numeroTelefono" class="form-control" id="numeroTelefono" placeholder="Ingrese su numero de telefono" formControlName="numeroTelefono">
           <small class="invalid" *ngIf="formGroup.get('numeroTelefono').errors?.required && formGroup.get('numeroTelefono').touched ">El numero de telefono es requerido</small>
-          <small class="invalid" *ngIf="formGroup.get('numeroTelefono').errors?.numeroTelefono && formGroup.get('numeroTelefono').touched ">El formato es invaldo</small>
+          <small class="invalid" *ngIf="formGroup.get('numeroTelefono').errors?.pattern && formGroup.get('numeroTelefono').touched ">El formato es invaldo</small>
         </div>
        
         <div class="col-md-12 mb-5">

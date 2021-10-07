@@ -24,6 +24,7 @@ export class ListadoJuegosComponent implements OnInit {
     this.traerJuego('Ahorcado');
     this.traerJuego('mayorMenor');
     this.traerJuego('aciertaNombre');
+    this.traerJuego('BlackJack');
   }
 
 
@@ -52,6 +53,10 @@ export class ListadoJuegosComponent implements OnInit {
           }
           case 'aciertaNombre':{
             this.listadoPuntajePreguntado = listado;
+            break;
+          }
+          case 'BlackJack':{
+            this.listadoPuntajeBlackJack = listado;
             break;
           }
         }
